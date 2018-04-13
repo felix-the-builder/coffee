@@ -1,0 +1,29 @@
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+15 6	* * 1	root	/home/pi/Projects/remote-control/start-coffee
+45 7	* * 1	root	/home/pi/Projects/remote-control/stop-coffee
+15 6	* * 2	root	/home/pi/Projects/remote-control/start-coffee
+45 7	* * 2	root	/home/pi/Projects/remote-control/stop-coffee
+45 6	* * 3	root	/home/pi/Projects/remote-control/start-coffee
+45 7	* * 3	root	/home/pi/Projects/remote-control/stop-coffee
+15 6	* * 4	root	/home/pi/Projects/remote-control/start-coffee
+45 7	* * 4	root	/home/pi/Projects/remote-control/stop-coffee
+15 6	* * 5	root	/home/pi/Projects/remote-control/start-coffee
+45 7	* * 5	root	/home/pi/Projects/remote-control/stop-coffee
+00 8	* * 6	root	/home/pi/Projects/remote-control/start-coffee
+30 9	* * 6	root	/home/pi/Projects/remote-control/stop-coffee
+00 8	* * 7	root	/home/pi/Projects/remote-control/start-coffee
+30 9	* * 7	root	/home/pi/Projects/remote-control/stop-coffee
+#
