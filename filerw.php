@@ -101,7 +101,7 @@ function createcron ($startstop) {
     $format[25] = "$startstop[26] $startstop[27] * * 1	root	/home/pi/Projects/remote-control/stop-coffee\n";
     $format[26] = "#";  
       
-    echo file_put_contents("crontab", $format);       
+    file_put_contents("crontab", $format);       
 }
 
 

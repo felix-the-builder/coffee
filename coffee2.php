@@ -197,10 +197,11 @@ $daten=rfcron($filename);
 </tr>
 </tbody>
 </table>
-<button form="Coffee-schedule" type="submit" method="post" name='submitpressed' value='1'>Submit</button>
-<button type="reset" value="Reset">Reset</button>
+<button form="Coffee-schedule" type="submit" method="post" formaction="ergebnis.php" name='submitpressed' value='1'>Änderungen übernehmen</button>
+<button type="reset" value="Zurücksetzen">Reset</button>
 
 <?php
+/*
 // POST-Formulardaten verarbeiten
 // ...
 //todo:
@@ -247,14 +248,20 @@ if (isset($_POST['submitpressed'])){
      $startstop[26] = (int)$_POST['stop-h-SO'];
      $startstop[27] = (int)$_POST['stop-m-SO'];
      
-     for ($i=0; $i <= 27; $i++) {
-     	echo "$startstop[$i] ";
-     }
+     
+     // for ($i=0; $i <= 27; $i++) {
+     //	echo "$startstop[$i] ";
+     // }
      
      wfcron($startstop, $filename);
      createcron($startstop);
+     
+     // echo file_get_contents('http://www/ergebnis.php');
+    
+    
    }
 }
+*/
 ?>
 
 
