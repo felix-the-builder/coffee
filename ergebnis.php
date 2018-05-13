@@ -7,7 +7,7 @@
 
 <?php
 require ('filerw.php');
-$filename = "./coffee-schedule";
+$filename = "./tmp/coffee-schedule";
 ?>
 
 <?php
@@ -15,7 +15,6 @@ $filename = "./coffee-schedule";
 // ...
 //todo:
 // reset button implementieren
-// wieso weren nach dem Absenden des gänderten Formulars wieder die alten Werte angezeigt?!
 // ...
 
 $startstop = array();

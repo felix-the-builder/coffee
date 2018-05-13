@@ -66,7 +66,7 @@ table.blueTable tfoot .links a{
 
 <?php
 require ('filerw.php');
-$filename = "./coffee-schedule";
+$filename = "./tmp/coffee-schedule";
 $daten=rfcron($filename);
 ?>
 
