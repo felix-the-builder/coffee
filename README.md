@@ -21,7 +21,7 @@ ergebnis.php: schreibt Ergebnis. Meldet Vollzug und ermöglicht Rückkehr zur Ta
 - coffee2.php, filerw.php und ergebnis.php und mvct.sh müssen in das Document Root Verzeichnis einen PHP-fähigen Webservers kopiert werden
 - coffee-schedule muss ebenfalls mit beliebigen Startwerten in das ./tmp Verzeichnis unter dem Document Root Verzeichnis einen PHP-fähigen Webservers kopiert werden
 
-__* Achtung *__ *: das Kopieren der /etc/crontab ist mittels einer Web-Application nicht direkt möglich, da dies root Rechte erfordern würde und dies dem unter non-root laufenden Web Server verboten ist!*
+__ Achtung __ *: das Kopieren der /etc/crontab ist mittels einer Web-Application nicht direkt möglich, da dies root Rechte erfordern würde und dies unter dem unter non-root laufenden Web Server verboten ist!*
 
 Daher muss die neu geschriebene crontab im Web Server Verzeichnis von einem unter root laufenden Shell-Skript in /etc automatisiert kopiert werden, sobald sie geändert wurde. Dazu kann folgendes Rezept verwendet werden:
 
@@ -39,8 +39,8 @@ in /etc/systemd/system müssen zwei Dateien erstellt werden:
 
 copy.service Datei erstellen (sudo geany copy.service):
 
-<p>[Unit]</p>
-Description=/etc/crontab austauschen (coffee-schedule Daten)
+<p>[Unit]
+Description=/etc/crontab austauschen (coffee-schedule Daten)</p>
 
 <p>[Service]</p>
 Type=oneshot
