@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<h2>Danke, die geänderten Start-Stop Zeiten sind nur registriert!</h2>
+<h2>Danke, die geänderten Start-Stop Zeiten sind nun registriert!</h2>
 <form>
   <button formaction="coffee2.php">Weitere Änderungen vornehmen (zurück zur Startseite)?</button>
 </form>
