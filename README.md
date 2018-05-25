@@ -27,7 +27,7 @@ Daher muss die neu geschriebene crontab im Web Server Verzeichnis von einem unte
 
 ## Shellscript (mvct.sh) zum Kopieren der /etc/crontab:
 
-C&#35;!/bin/bash
+&#35;!/bin/bash
 mv /etc/crontab /etc/crontab.old
 cd /var/www/html/tmp
 cp ./crontab /etc/crontab
@@ -39,22 +39,22 @@ in /etc/systemd/system müssen zwei Dateien erstellt werden:
 
 copy.service Datei erstellen (sudo geany copy.service):
 
-<p>[Unit]
+<p>[Unit]</p>
 Description=/etc/crontab austauschen (coffee-schedule Daten)
 
-[Service]
+<p>[Service]</p>
 Type=oneshot
 ExecStart=/var/www/html/mvct.sh
 
 copy.path Datei erstellen (sudo geany copy.path): 
 
-[Unit]
+<p>[Unit]</p>
 Description=Startet copy.service wenn eine Datei in /var/www/html/tmp
 
-[Path]
+<p>[Path]</p>
 PathModified=/var/www/html/tmp
 
-[Install]
+<p>[Install]</p>
 WantedBy=multi-user.target </p>
 
 Nun habe ich mittels 
