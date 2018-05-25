@@ -42,19 +42,19 @@ copy.service Datei erstellen (sudo geany copy.service):
 <p>[Unit]
 Description=/etc/crontab austauschen (coffee-schedule Daten)</p>
 
-<p>[Service]</p>
+<p>[Service]
 Type=oneshot
-ExecStart=/var/www/html/mvct.sh
+ExecStart=/var/www/html/mvct.sh</p>
 
 copy.path Datei erstellen (sudo geany copy.path): 
 
-<p>[Unit]</p>
-Description=Startet copy.service wenn eine Datei in /var/www/html/tmp
+<p>[Unit]
+Description=Startet copy.service wenn eine Datei in /var/www/html/tmp</p>
 
-<p>[Path]</p>
-PathModified=/var/www/html/tmp
+<p>[Path]
+PathModified=/var/www/html/tmp</p>
 
-<p>[Install]</p>
+<p>[Install]
 WantedBy=multi-user.target </p>
 
 Nun habe ich mittels 
