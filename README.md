@@ -39,23 +39,23 @@ in /etc/systemd/system müssen zwei Dateien erstellt werden:
 
 copy.service Datei erstellen (sudo geany copy.service):
 
-<p>[Unit]
-Description=/etc/crontab austauschen (coffee-schedule Daten)</p>
+<p>[Unit]</p>
+<p>Description=/etc/crontab austauschen (coffee-schedule Daten)</p>
 
-<p>[Service]
-Type=oneshot
-ExecStart=/var/www/html/mvct.sh</p>
+<p>[Service]</p>
+<p>Type=oneshot
+ExecStart=/var/www/html/mvct.sh
 
-copy.path Datei erstellen (sudo geany copy.path): 
+copy.path Datei erstellen (sudo geany copy.path): </p>
 
-<p>[Unit]
-Description=Startet copy.service wenn eine Datei in /var/www/html/tmp</p>
+<p>[Unit]</p>
+<p>Description=Startet copy.service wenn eine Datei in /var/www/html/tmp</p>
 
-<p>[Path]
-PathModified=/var/www/html/tmp</p>
+<p>[Path]</p>
+<p>PathModified=/var/www/html/tmp</p>
 
-<p>[Install]
-WantedBy=multi-user.target </p>
+<p>[Install]</p>
+<p>WantedBy=multi-user.target </p>
 
 Nun habe ich mittels 
 systemctl start copy.path 
