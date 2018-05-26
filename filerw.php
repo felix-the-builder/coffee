@@ -65,7 +65,7 @@ function &reset_wfcron ($filename) {
 
 function createcron ($startstop) {
     //copy crontab into crontab-old and create a new crontab with new coffee-schedule
-    //when deploying on the target system enter the correct path here: /etc/crontab
+    //when deploying on the target system enter the correct path here: ./tmp/crontab
     
     $rc = copy ("./tmp/crontab", "./tmp/crontab.old");
     if( $rc == false ) {
@@ -96,7 +96,7 @@ function createcron ($startstop) {
     $format[19] = "$startstop[15] $startstop[14]    * * 4   root	/home/pi/Projects/remote-control/stop-coffee\n";
     $format[20] = "$startstop[17] $startstop[16]    * * 5   root	/home/pi/Projects/remote-control/start-coffee\n";
     $format[21] = "$startstop[19] $startstop[18]    * * 5   root	/home/pi/Projects/remote-control/stop-coffee\n";
-    $format[22] = "$startstop[21] $startstop[22]    * * 6   root	/home/pi/Projects/remote-control/start-coffee\n";
+    $format[22] = "$startstop[21] $startstop[20]    * * 6   root	/home/pi/Projects/remote-control/start-coffee\n";
     $format[23] = "$startstop[23] $startstop[22]    * * 6   root	/home/pi/Projects/remote-control/stop-coffee\n";
     $format[24] = "$startstop[25] $startstop[24]    * * 7   root	/home/pi/Projects/remote-control/start-coffee\n";
     $format[25] = "$startstop[27] $startstop[26]    * * 7   root	/home/pi/Projects/remote-control/stop-coffee\n";
